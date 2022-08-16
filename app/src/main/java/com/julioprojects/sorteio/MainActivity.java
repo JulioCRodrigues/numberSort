@@ -23,7 +23,17 @@ public class MainActivity extends AppCompatActivity {
         binding.tvNumberSort.setText("-");
 
         sortearNumero();
+        limpar();
 
+    }
+
+    private void limpar() {
+        binding.buttonClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.tvNumberSort.setText("-");
+            }
+        });
     }
 
     private void sortearNumero() {
